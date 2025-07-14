@@ -2,9 +2,13 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --glasscolor: rgba(255, 255, 255, 0.612);
+  --backdrop-filter: blur(200px);
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgba(224, 223, 223, 0.322);
+  background: linear-gradient(135deg, #ffffff 0%, #fce67b 100%);
 }
 nav {
   width: 100vw;
@@ -45,8 +49,12 @@ nav button {
   color: black;
   border: none;
 }
-h1 {
-  margin-left: 2vw;
+main{
+    margin-left: 6vw;
+}
+main h1 {
+  font-size: 3rem;
+  font-weight: 500;
 }
 #upper-container {
   width: 100vw;
@@ -61,8 +69,10 @@ h1 {
   height: 15vh;
   /* background-color: red; */
   gap: 10px;
-  margin-left: 2vw;
   margin-top: 2vh;
+}
+#info h3 {
+  font-weight: 400;
 }
 .content {
   display: flex;
@@ -78,23 +88,23 @@ h1 {
   border: none;
   border-radius: 18px;
   text-align: start;
+  font-weight: 300;
   padding: 5px;
 }
 .content-2 button {
   width: 5vw;
   height: 5vh;
   background-color: orange;
-  color: white;
   border: none;
   border-radius: 18px;
   text-align: start;
   padding: 5px;
+  font-weight: 300;
 }
 .content-3 button {
   width: 15vw;
   height: 5vh;
   background-color: orange;
-  color: white;
   border: none;
   border-radius: 18px;
   text-align: start;
@@ -108,6 +118,7 @@ h1 {
   border-radius: 18px;
   text-align: start;
   padding: 5px;
+  font-weight: 300;
 }
 #data {
   width: 30vw;
@@ -120,46 +131,80 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  width: 95vw;
+  width: 90vw;
   height: 60vh;
-  padding: 25px;
+  margin-left: 6vw;
   gap: 5px;
 }
 .container-01 {
   grid-column: 1/2;
   grid-row: 1/1;
-  background-color: purple;
+  background-color: var(--glasscolor);
   border-radius: 15px;
+  background-image: url(icons/vecteezy_professional-woman-with-blonde-hair-smiling-in-office_45956840.jpeg);
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
+.person{
+  width: 70%;
+  height: 20%;
+  margin-left: 1vw;
+  padding: 15px;
+}
+.person h3{
+  font-size: 2rem;
+  font-weight: 400;
+}
+.person h5{
+  font-size: 1rem;
+  font-weight: 300;
+}
+.container-01 button{
+  margin: 20px;
+  width: 5vw;
+  height: 5vh;
+  background:none;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  font-size: 2rem;
+}
+
 .container-02 {
   grid-column: 2/3;
   grid-row: 1/1;
-  background-color: rgb(235, 122, 235);
+  background-color: var(--glasscolor);
   border-radius: 15px;
 }
 .container-03 {
   grid-column: 3/4;
   grid-row: 1/1;
-  background-color: rgb(235, 122, 235);
+  background-color: var(--glasscolor);
   border-radius: 15px;
 }
 .container-04 {
   grid-row: 1/3;
-  background-color: rgb(133, 73, 133);
+  background-color: var(--glasscolor);
   border-radius: 15px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .container-05 {
   grid-row: 2/2;
-  background-color: rgb(171, 233, 135);
+  background-color: var(--glasscolor);
   border-radius: 15px;
 }
 .container-06 {
   grid-row: 2/2;
   grid-column: 2/4;
-  background-color: rgb(67, 104, 46);
+  background-color: var(--glasscolor);
   border-radius: 15px;
 }
 .week {
@@ -190,10 +235,9 @@ section {
 .card {
   width: 80%;
   height: 80%;
-  margin-top: 10vh;
   background-color: rgb(15, 15, 15);
   color: white;
-  border-radius: 8px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,6 +247,7 @@ section {
   justify-content: space-between;
   width: 90%;
   margin-top: 2vh;
+  align-items: center;
 }
 .layout {
   width: 95%;
@@ -236,6 +281,15 @@ section {
   gap: 5px;
   align-items: center;
 }
-.left-content h2{
+.left-content h2 {
   font-weight: 200;
+}
+.icon-bg {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
