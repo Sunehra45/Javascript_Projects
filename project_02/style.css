@@ -371,6 +371,19 @@ section {
   grid-row: 2/2;
   background-color: var(--glasscolor);
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.container-05 .top{
+  margin-top: 2vh;
+}
+hr{
+  width: 80%;
+  border: none;
+  border-top: 1px dotted #000;
 }
 .container-06 {
   grid-row: 2/2;
@@ -398,4 +411,7 @@ section {
 }
 .left-content h2 {
   font-weight: 200;
+}
+.content{
+  display: fl;
 }
